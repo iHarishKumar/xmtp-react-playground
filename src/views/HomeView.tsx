@@ -5,6 +5,7 @@ import { shortAddress } from "../util/shortAddress";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import { useDisconnect } from "wagmi";
+import BroadcastMessages from "./BroadcastMessages";
 
 export default function HomeView(): ReactElement {
   const client = useClient()!;
@@ -49,6 +50,7 @@ export default function HomeView(): ReactElement {
         </Link>
       </small>
       <ConversationListView />
+      <BroadcastMessages />
     </div>
   );
 }
